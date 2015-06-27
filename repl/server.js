@@ -22,7 +22,9 @@ function waiter(req,res){
             urlObj[q[0]] = q[1];
         })
     }
-    if(pathname == '/menu'){
+
+    console.log(pathname);
+    if(url == '/menu'){
         res.end('<ul><li><a href="/chicken">黄焖鸡</a></li><li><a href="/leg">鸡腿饭</a></li></ul>');
     }else if(pathname == '/chicken'){
         res.end('客官，黄焖鸡来了 。');
@@ -31,8 +33,6 @@ function waiter(req,res){
     } else{
         res.end(url);
     }
-
-
 }
 
 server.listen(8080,'localhost');
